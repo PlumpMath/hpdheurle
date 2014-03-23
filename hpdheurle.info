@@ -52,7 +52,7 @@ stylesheets[all][] = system.theme.css
 ; Then we add our own stylesheet.
 stylesheets[all][] = css/styles.css
 stylesheets[all][] = css/hpdheurle.css
-;stylesheets[all][] = css/hpdheurle.less
+stylesheets[all][] = css/jquery.jscrollpane.css
 
 ;fonts 
 stylesheets[all][] = 'http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900'
@@ -73,8 +73,9 @@ stylesheets[all][] = 'http://fonts.googleapis.com/css?family=Source+Sans+Pro:400
 
 ;scripts[] = js/less.min.js
 ;scripts[] = js/script.js
+scripts[] = js/jquery.jscrollpane.min.js
+scripts[] = js/jquery.mousewheel.min.js
 scripts[] = js/hpdheurle.js
-
 
 ; This section lists the regions defined in Zen's default page.tpl.php and
 ; maintenance-page.tpl.php files. The name in brackets is the machine name of
