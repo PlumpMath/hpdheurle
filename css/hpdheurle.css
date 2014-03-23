@@ -1,0 +1,122 @@
+/* @override 
+	http://hpdheurle.com/drupal/sites/all/themes/hpdheurle/css/hpdheurle.css
+	http://hpdheurle.com/drupal/sites/all/themes/hpdheurle/css/hpdheurle.css?n2wglh
+	http://hpdheurle.com/drupal/sites/all/themes/hpdheurle/css/hpdheurle.css?n2wpfd
+	http://hpdheurle.com/drupal/sites/all/themes/hpdheurle/css/hpdheurle.css?n2wqe3
+	http://hpdheurle.com/drupal/sites/all/themes/hpdheurle/css/hpdheurle.css?n2wqtr
+	http://hpdheurle.com/drupal/sites/all/themes/hpdheurle/css/hpdheurle.css?n2wrvy */
+
+
+body {
+	font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+	color: #03246b;
+	font-size: 0.85em;
+}
+
+a {
+	color: #043545;
+}
+
+a:hover{
+	color: #18baea;
+}
+
+/* @group SIDEBAR */
+
+.logo {
+	text-align: right;
+}
+
+section.region-sidebar-first{
+	padding-left: 0px;
+	/*border: 5px solid cyan;*/
+	width: 200px !important;
+	
+}
+
+section.region-sidebar-first .block {
+		margin-bottom: 13px;
+}
+
+.hpdheurle-menu {
+	text-transform: uppercase;
+	text-align: right;
+	font-size: 0.85em;
+	line-height: 1.7em;
+	letter-spacing: 0.1em;
+}
+
+/*.hpdheurle-menu .art_reproduction:before {
+	display: block;
+	content: "";
+}*/
+.hpdheurle-menu .art_reproduction {
+	display: inline;
+}
+
+.hpdheurle-menu a {
+	font-weight: bold;
+	text-decoration: none;
+	/*border-bottom: 3px solid #03246b; */
+}
+
+.hpdheurle-menu a:hover {
+	border-bottom: 2px solid #47d4f1;
+}
+
+.view-id-projects_menu {
+	padding-left: 40px;	
+	overflow: auto;
+}
+
+.view-id-projects_menu .views-row {
+	float: right;
+}
+
+.view-id-projects_menu .sprite-outer a .sprite-inner {
+	background-image: url(../images-hpdheurle/project_sprite_35hpx.png);
+	background-position: 0px 0px;
+	width: 25px;
+	height: 25px;
+}
+
+.view-id-projects_menu .sprite-outer a:hover .sprite-inner {
+	background-position: -35px 0px;
+	background-repeat: no-repeat;
+}
+
+/* @end */
+
+/* @group PROJECT */
+
+body.node-type-project #page-title {
+	font-size: 1.5em;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+
+body.node-type-project .field-name-body p {
+	margin: 0px 0px 10px 0px;
+}
+
+body.node-type-project .field-name-body {
+	font-size: 0.8em;
+	line-height: 1.5em;
+	width:  250px;
+	float: left;
+	margin-right: 30px;
+	
+}
+
+.node-project .field-name-field-images {
+	width:  10000px;
+}
+
+
+.node-project .field-name-field-images .field-item {
+	float: left;
+	margin-right: 30px;
+}
+
+
+/* @end */
