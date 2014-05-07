@@ -55,7 +55,7 @@ stylesheets[all][] = css/hpdheurle.css
 stylesheets[all][] = css/jquery.jscrollpane.css
 
 ;fonts 
-stylesheets[all][] = 'http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900'
+;stylesheets[all][] = 'http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900'
 
 ; Built-in conditional stylesheet support has been removed from Zen 7.x-5.x.
 ; Instead, Zen now adds conditional-comment-included classes to the html
@@ -76,6 +76,8 @@ stylesheets[all][] = 'http://fonts.googleapis.com/css?family=Source+Sans+Pro:400
 scripts[] = js/jquery.jscrollpane.min.js
 scripts[] = js/jquery.mousewheel.min.js
 scripts[] = js/hpdheurle.js
+scripts[] = js/retina-1.1.0.min.js
+scripts[] = js/packery.pkgd.min.js
 
 ; This section lists the regions defined in Zen's default page.tpl.php and
 ; maintenance-page.tpl.php files. The name in brackets is the machine name of

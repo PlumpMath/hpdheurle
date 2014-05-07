@@ -9,7 +9,15 @@
 ?>
 <article class="node-<?php print $node->nid; ?> <?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
-  <?php if ($title_prefix || $title_suffix || $unpublished || !$page && $title): ?>
+	<?php 
+	print render($content['field_solid_object_image']);
+		?>
+
+	  <?php if ($title): ?>
+        <h1 class="page__title title" id="page-title"><?php print $title; ?></h1>
+      <?php endif; ?>
+
+	<?php if ($title_prefix || $title_suffix || $unpublished || !$page && $title): ?>
     <header>
       <?php print render($title_prefix); ?>
       <?php if (!$page && $title): ?>
@@ -24,12 +32,8 @@
   <?php endif; ?>
 
   <?php
-    // We hide the comments and links now so that we can render them later.
-    hide($content['comments']);
-    hide($content['links']);
-    print render($content);
+print render($content);
   ?>
 
-  <?php print render($content['links']); ?>
 
 </article>
