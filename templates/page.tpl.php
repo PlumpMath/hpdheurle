@@ -10,10 +10,12 @@
 
 <div id="page">
 
+<!--
   <div id="overlay">
 	<div id="overlay-grid"></div>
 	<div id="overlay-gradient"></div>
   </div>
+ -->
 
   <header class="header" id="header" role="banner">
 
