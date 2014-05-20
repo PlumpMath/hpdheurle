@@ -32,30 +32,34 @@
 			$items1 = field_get_items('node', $node, 'field_images');
 			$items2 = field_get_items('node', $node, 'field_solid_object_image');
 
-			foreach ($items1 as $obj) {
-				$output = field_view_value('node', $node, 'field_images', $obj, array(
-					'type' => 'image',
-					'settings' => array(
-					'image_style' => 'bigpicture', //place your image style here
-					),
-				));
-				print '<td class="image">';
-				print render($output);
-				print '</td>';
-				print  "\n";
+			if(!empty($items1)) {
+				foreach ($items1 as $obj) {
+					$output = field_view_value('node', $node, 'field_images', $obj, array(
+						'type' => 'image',
+						'settings' => array(
+						'image_style' => 'bigpicture', //place your image style here
+						),
+					));
+					print '<td class="image">';
+					print render($output);
+					print '</td>';
+					print  "\n";
+				}
 			}
 
-			foreach ($items2 as $obj) {
-				$output = field_view_value('node', $node, 'field_solid_object_image', $obj, array(
-					'type' => 'image',
-					'settings' => array(
-					'image_style' => 'bigpicture', //place your image style here
-					),
-				));
-				print '<td class="solid-next">';
-				print render($output);
-				print '</td>';
-				print  "\n";
+			if(!empty($items2)) {
+				foreach ($items2 as $obj) {
+					$output = field_view_value('node', $node, 'field_solid_object_image', $obj, array(
+						'type' => 'image',
+						'settings' => array(
+						'image_style' => 'bigpicture', //place your image style here
+						),
+					));
+					print '<td class="solid-next">';
+					print render($output);
+					print '</td>';
+					print  "\n";
+				}
 			}
 			?>
 

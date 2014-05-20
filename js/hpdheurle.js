@@ -90,7 +90,7 @@ $(document).ready(function() {
 
 	$(".sprite-inner img").hover(function() {
 		var thisnid = $(this).parent().attr("name");
-		scroll.setDegree(thisnid);
+//		scroll.setDegree(thisnid);
 		
 		// change gradient
 		var thisgradients = $(".project-gradient.node-" + thisnid).text().trim().split("\n");
@@ -134,7 +134,7 @@ var BackgroundScroll = function(params) {
 		imageHeight: $('#overlay-grid').height()
 	}, params);
 	
-	var stepX = Math.sin(45),
+	var stepX = -1,
 		stepY = 1,
 		currentX = 0,
 		currentY = 0;
@@ -143,8 +143,8 @@ var BackgroundScroll = function(params) {
 	var scroll = function() {
 		currentX += stepX;
 		currentY -= stepY;
-		currentX = currentX % params.imageWidth;
-		currentY = currentY % params.imageHeight;
+		currentX = currentX % (params.imageWidth * 20);
+		currentY = currentY % (params.imageHeight * 20);
 		
 		$('#overlay-grid').css('backgroundPosition', currentX + 'px ' + currentY + 'px');
 	
