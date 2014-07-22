@@ -13,9 +13,9 @@
 	print render($content['field_solid_object_image']);
 		?>
 
-	  <?php if ($title): ?>
+	  <?php /* if ($title): ?>
         <h1 class="page__title title" id="page-title"><?php print $title; ?></h1>
-      <?php endif; ?>
+	  <?php endif; */ ?>
 
 	<?php if ($title_prefix || $title_suffix || $unpublished || !$page && $title): ?>
     <header>

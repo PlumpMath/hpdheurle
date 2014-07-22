@@ -77,9 +77,9 @@ $(document).ready(function() {
 		
 	$("a.art_reproduction").hover(
 		function() {
-			$(".sprite-outer.art.reproduction").addClass("mouseover");
+			$(".solid-object.art.reproduction").addClass("mouseover");
 		}, function() {
-			$(".sprite-outer.art.reproduction").removeClass("mouseover");
+			$(".solid-object.art.reproduction").removeClass("mouseover");
 		}
 	);
 	
@@ -88,35 +88,34 @@ $(document).ready(function() {
 	scroll.init();
 
 
-	$(".sprite-inner img").hover(function() {
+	$(".solid-object-inner").hover(function() {
 		var thisnid = $(this).parent().attr("name");
-//		scroll.setDegree(thisnid);
 		
 		// change gradient
 		var thisgradients = $(".project-gradient.node-" + thisnid).text().trim().split("\n");
 		$.each(thisgradients, function(){
 			thisgrad = String(this).trim()
-//			console.log(thisgrad);
-//			$('#overlay-gradient').css({'background': 'linear-gradient(30deg, #ffd53c 0%, #eb2626 100%) 0 0'});
 			$("#overlay-gradient").css({'background': thisgrad});
-//			console.log("thistring ====="+thisgrad+"====");
 		});
 		
-		// hover title
+		// hover tooltip 
 		$(".project-title.node-" + thisnid).addClass("spritehover");
+
 		// hover sprite
-		$(".sprite-inner.node-" + thisnid).addClass("spritehover");
+		$(this).addClass("spritehover");
+//		$(".solid-object-negative.node-" + thisnid).addClass("spritehover");
+
 		// let overlay know we're hovering
 		$("#overlay").addClass("spritehover");
 
 			
-		$(".view-display-id-block_3 .node-" + thisnid).css("z-index", 201);
+//		$(".view-display-id-block_3 .node-" + thisnid).css("z-index", 201);
 		
 	}, function() {
 		$(".project-title.spritehover").removeClass("spritehover");
-		$(".sprite-inner.spritehover").removeClass("spritehover");
+		$(".solid-object-inner.spritehover").removeClass("spritehover");
 		$("#overlay").removeClass("spritehover");
-		$(".view-display-id-block_3 .node-" + thisnid).css("z-index", 1);
+//		$(".view-display-id-block_3 .node-" + thisnid).css("z-index", 1);
 	}
 	);
 	
@@ -158,7 +157,13 @@ var BackgroundScroll = function(params) {
 	this.setDegree = function(deg) {
 		stepX = Math.sin(deg * 10);
 	}
+	
+	
+	$("#block-views-projects-menu-block .views-row-last img").load(function() {
+		moveSprites();
+	});
 };
+
 
 
 
@@ -169,10 +174,18 @@ $(window).on('resize', function(){
 
 
 function moveSprites() {
-	var orgoff = $(".view-display-id-block").offset();
-	$(".view-display-id-block_3").offset(orgoff);
+	var solidobject_neg = $("#block-views-projects-menu-block");
+	var solidobject_pos = $("#block-views-projects-menu-block-3");
+//	$(".view-display-id-block_3").offset(orgoff);
 //	$(".view-display-id-block_3 {
-	console.log($(".view-display-id-block").offset());
+//	console.log(solidobject_neg.offset());
+//	console.log(solidobject_pos.offset());
+	solidobject_neg.offset(solidobject_pos.offset());
+//console.log(solidobject_neg.offset());
+//console.log(solidobject_pos.offset());
+//console.log(solidobject_neg.offset());
+//console.log(solidobject_pos.offset());
+
 }
 
 
@@ -187,6 +200,7 @@ function resizeImages() {
 		console.log("smallerthan");
 		$(".project-images-wrapper").css("margin-top", "-" + ((winheight - imgpadding) / 2) + "px");
 		$(".project-images td.image img").css("height", (winheight - imgpadding) + "px");
+		$(".project-images td.solid-next img").css("height", ((winheight - imgpadding) * 0.4) + "px");
 	}
 }
 

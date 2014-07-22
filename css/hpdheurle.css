@@ -23,9 +23,18 @@
 	http://vps.provolot.com/othersites/solidobjectphoto.com/sites/all/themes/hpdheurle/css/hpdheurle.css?n59p64
 	http://vps.provolot.com/othersites/solidobjectphoto.com/sites/all/themes/hpdheurle/css/hpdheurle.css?n59pj1
 	http://vps.provolot.com/othersites/solidobjectphoto.com/sites/all/themes/hpdheurle/css/hpdheurle.css?n5h4k2
-	http://vps.provolot.com/othersites/solidobjectphoto.com/sites/all/themes/hpdheurle/css/hpdheurle.css?n5w047 */
+	http://vps.provolot.com/othersites/solidobjectphoto.com/sites/all/themes/hpdheurle/css/hpdheurle.css?n5w047
+	http://vps.provolot.com/othersites/solidobjectphoto.com/sites/all/themes/hpdheurle/css/hpdheurle.css?n5w6m8
+	http://vps.provolot.com/othersites/solidobjectphoto.com/sites/all/themes/hpdheurle/css/hpdheurle.css?n5w6x7
+	http://vps.provolot.com/othersites/solidobjectphoto.com/sites/all/themes/hpdheurle/css/hpdheurle.css?n5wcv1 */
 	
-/* @group  EVERYWHERE */
+	/* @group ADMIN */
+
+	
+	
+	/* @end */
+	
+	/* @group  EVERYWHERE */
 
 html {
 	height: 100%;
@@ -61,12 +70,13 @@ img::selection {
 
 a {
 	color: #00246f;
-	/*border-bottom: 2px solid #1ebcdb;*/
+	text-decoration: none;
+	border-bottom: 1px solid #00246f;
 }
 
 a:hover{
 	color: #1ebcdb;
-	border-bottom: 2px solid #1ebcdb;	
+	border-bottom: 2px solid #1ebcdb !important;	
 }
 
 
@@ -81,7 +91,7 @@ display: none;
 	padding-top: 100px;
 }
 
-/* Chrome, Safari */
+/* Chrome, Safari 
 ::-webkit-scrollbar {
 width: 15px;
 height: 13px;
@@ -106,7 +116,7 @@ background-color: #00246f;
 		position: fixed;
 		top: 0px;
 		left: 0px;
-		z-index: 200;
+		z-index: 300;
 		width: 100%;
 		height: 100%;
 		opacity: 0;
@@ -185,7 +195,12 @@ background-color: #00246f;
 	}
 	
 
-	
+	.overlay-arrow {
+		position: fixed;
+		top: 30px;
+		left: 30px;
+		background: url(http://vps.provolot.com/othersites/solidobjectphoto.com//sites/all/themes/hpdheurle/images-hpdheurle/arrow.png);		
+	}
 }
 
 
@@ -195,15 +210,15 @@ background-color: #00246f;
 	}
 }
 
-.view-display-id-block_3 {
+/*.view-display-id-block_3 {
 	position: fixed;
 	top:  -1000px;
 	left: -1000px;
-	/* top and left are set via javascript.. messy but works */
+	/* top and left are set via javascript.. messy but works *!/
 	
 	z-index: 0;
 	width: 160px;
-	/*border:  1px solid blue;*/
+	/*border:  1px solid blue;*!/
 	pointer-events: none;
 }
 
@@ -227,8 +242,26 @@ background-color: #00246f;
 	background-image: -webkit-linear-gradient(right top, #23657D 0%, #21FCFC 100%);
 	background-image: -ms-linear-gradient(right top, #23657D 0%, #21FCFC 100%);
 	background-image: linear-gradient(to right top, #23657D 0%, #21FCFC 100%);
+}*/
+
+/* @end */
+
+/* @group UNDERLAY SIDEBAR */
+
+@media screen and (min-width: 480px) { /*when screen is big*/
+
+.sidebar-first-background {
+	
+	background-color: white;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width:  200px; /*same as sidebar-first */
+	height:100%;
+	z-index: 200;
 }
 
+}
 /* @end */
 
 /* @group SIDEBAR */
@@ -278,7 +311,7 @@ section.region-sidebar-first{
 		height: 100%;
 		padding-right: 20px;
 		width: 200px !important;
-		z-index: 350;
+		z-index: 400;
 		display: table;
 	}
 	
@@ -289,7 +322,14 @@ section.region-sidebar-first{
 	
 	}
 	
+
+
+	#block-block-9 {
+		display: none;
+	}
 }
+
+
 
 
 
@@ -340,9 +380,27 @@ section.region-sidebar-first{
 	#block-block-1 {
 		margin-bottom: 1px;
 	}
+	
+		
+	.about-mobile-button {
+		/*border: 1px solid black*/
+		margin-top: 10px;
+		overflow: hidden;
+	}
+	.about-mobile-button .inner {
+		background-color: #00246f;
+		display: block;
+		padding: 3px 10px;
+		/*border: 1px solid cyan;*/
+		color: white;
+		text-align:right;
+		text-transform: uppercase;
+		font-weight: bold;
+		/*border-bottom: 2px solid white; */
+		float: right;
+	}
+
 }
-
-
 
 .hpdheurle-menu {
 	text-transform: uppercase;
@@ -364,10 +422,25 @@ section.region-sidebar-first{
 .hpdheurle-menu a {
 	font-weight: bold;
 	text-decoration: none;
-	/*border-bottom: 3px solid #00246f; */
+	/*border-bottom: 2px solid #00246f; */
+	border-bottom: none;
 }
 
 .hpdheurle-menu a:hover {
+}
+
+.hpdheurle-menu .statement-bold {
+	font-weight: bold;
+}
+
+/* @group SOLIDOBJECTMENU S */
+
+#block-views-projects-menu-block {
+	position: fixed;
+	z-index: 250;
+	top: 400px;
+	left: 300px;
+	width: 160px;
 }
 
 .view-id-projects_menu {
@@ -379,53 +452,75 @@ section.region-sidebar-first{
 	float: right;
 }
 
-
-.view-id-projects_menu .sprite-outer a .sprite-inner {
-	width: 20px;
-	height: 20px;
+.solid-objects {
 	padding-left: 15px;
 	padding-bottom: 15px;
 }
 
-.view-id-projects_menu .sprite-outer .sprite-inner img {
+.solid-objects .spritehover {
+	/*border: 1px solidd red;*/
+	/*display: none;*/
+}
+
+.solid-object-inner {
+	/*position: relative;*/
+}
+/*.solid-object-inner .solid-object-negative {
+	/*position: absolute;*!/
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+}
+.solid-object-inner .solid-object-gradient {
+	/*position: relative;*!/
+	top: 0px;
+	left: 0px;
+}*/
+
+.solid-objects img {
+	display: block;
+}
+.solid-objects .solid-object-negative img {
 	background-color: #00246f;
 }
-
-.view-id-projects_menu .sprite-outer .sprite-inner.spritehover img {
-	background-image: -webkit-gradient(
-		linear,
-		left bottom,
-		right top,
-		color-stop(0, #23657D),
-		color-stop(1, #21FCFC)
-	);
-	background-image: -o-linear-gradient(right top, #23657D 0%, #21FCFC 100%);
-	background-image: -moz-linear-gradient(right top, #23657D 0%, #21FCFC 100%);
-	background-image: -webkit-linear-gradient(right top, #23657D 0%, #21FCFC 100%);
-	background-image: -ms-linear-gradient(right top, #23657D 0%, #21FCFC 100%);
-	background-image: linear-gradient(to right top, #23657D 0%, #21FCFC 100%);
-	
-	
+.solid-objects .solid-object-gradient {
+	opacity: 0;
 }
 
+.solid-objects .spritehover .solid-object-gradient {
+	opacity: 1;
+}
+
+
+#block-views-projects-menu-block view,
+#block-views-projects-menu-block-3 view {
+	border: 1px solid red;
+	margin: 0px !important;
+	padding: 0px !important;
+}
+
+/* @end */
+
+/*
 .attachment .view-projects-menu  {
 	width: 100%;
 	height:  100%;
 	position: absolute;
-	z-index: 3000;
-}
+	z-index: 410;
+}*/
 .project-title {
 	opacity: 0;
 	padding: 0px 5px;
 	margin: -30px -20px 0px 0px;
-	background-color: #46d5f0;
+	background-color: #00246f;
+	
 	/*font-weight: bold;*/
 	font-size: 0.8em;
 	position: fixed;
 	top:  300px;
 	left:  500px;
 	color: white;
-	z-index: 2000 !important;
+	z-index: 420 !important;
 
 
 /* Fade out */
@@ -456,25 +551,6 @@ transition-duration: 150ms;
 	opacity: 1;
 }
 
-
-
-.sprite-outer.mouseover .sprite-inner img {
-	background-image: -webkit-gradient(
-		linear,
-		left bottom,
-		right top,
-		color-stop(0, #23657D),
-		color-stop(1, #21FCFC)
-	);
-	background-image: -o-linear-gradient(right top, #23657D 0%, #21FCFC 100%);
-	background-image: -moz-linear-gradient(right top, #23657D 0%, #21FCFC 100%);
-	background-image: -webkit-linear-gradient(right top, #23657D 0%, #21FCFC 100%);
-	background-image: -ms-linear-gradient(right top, #23657D 0%, #21FCFC 100%);
-	background-image: linear-gradient(to right top, #23657D 0%, #21FCFC 100%);
-
-	
-	
-}
 /* @end */
 
 
@@ -511,6 +587,10 @@ body.node-type-project .field-name-body {
 	background-color: #00246f;
 }
 
+.project-images td.solid-next {
+	text-align: center;
+	background-color: #00246f;
+}
 
 @media screen and (min-width: 480px) { /*when screen is big*/
 
@@ -619,12 +699,14 @@ body.node-type-project .field-name-body {
 		 		
 	}
 
+.project-images  {
+	margin-right: 40px; /*CHECK*/
+}
 	.project-images td.solid-next img {
 	/*border: 1px solid black;*/
 		/*max-height: 50% !important;*/
 		/*float: right;*/
-		display: none;
-		background-color: blue;
+		/*display: none;*/
 		height: 40%;
 	}
 	
@@ -632,6 +714,14 @@ body.node-type-project .field-name-body {
 
 
 @media screen and (max-width: 480px) { /*when screen is small*/
+
+.field-name-field-solid-object-image img {
+	width: 40%;		
+	float: ;
+}
+.project-images td.solid-next img {
+	width: 40%;		
+}
 
 	.project-images td img {
 		/*min-height: none !important;*/
@@ -658,7 +748,7 @@ body.node-type-project .field-name-body {
 	}
 	.field-name-body {
 		/*clear: both;*/
-		margin-left: 85px;
+		/*margin-left: 85px;*/
 	}
 	.solid-next {
 		display: none;
